@@ -2,23 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="1dp">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#79ACB3"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        android:layout_margin="2dp"
+
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:padding="2dp"
+
+    >
     <TextView
         android:id="@+id/repoNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="20sp"
+        android:text="name"
         android:textAlignment="textStart"
         android:layout_marginBottom="4dp" />
 
     <TextView
+        android:layout_marginTop="4dp"
         android:id="@+id/repoDescriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="2"
+        android:text="description"
+        android:layout_below="@id/repoNameTextView"
         android:textAlignment="textStart"
         android:textSize="14sp" />
 
@@ -27,7 +48,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/repoDescriptionTextView"
         android:layout_gravity="end"
         android:layout_marginTop="8dp" />
+
+
+</RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>
