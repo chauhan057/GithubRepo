@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+
+    <EditText
+        android:id="@+id/ownerEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Owner"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/repoNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ownerEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Repository Name"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repoNameEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Add Repository" />
+
+</RelativeLayout>
